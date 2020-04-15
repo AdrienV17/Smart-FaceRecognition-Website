@@ -5,7 +5,7 @@ import './Logo.css';
 
 const Logo = () => {
     return (
-        <div className="ma4 mt10">
+        <div className="ml4 mt10">
             <Tilt 
                 className="Tilt br2 shadow-2  " 
                 options={{ max : 55 }} 
