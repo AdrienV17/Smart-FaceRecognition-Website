@@ -7,7 +7,7 @@ import { Component } from 'react';
 class SignIn extends Component{
 
     constructor(props){
-        super();
+        super(props);
         this.state = {
             signInEmail:'',
             signInPassword:''
@@ -31,9 +31,9 @@ class SignIn extends Component{
                 password:this.state.signInPassword
             })
         }).then(response => response.json())
-        .then(data=> {
-            if (data){
-                this.props.loadUser(data)
+        .then(user=> {
+            if (user.id){
+                this.props.loadUser(user)
                 this.props.onRouteChange('home')
             }
         })

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
-import Clarifai from 'clarifai';
 import Navigation from './components/Navigation/Navigation.jsx';
 import SignIn from './components/SignIn/SignIn';
 import Register  from './components/Register/Register';
@@ -11,10 +10,6 @@ import FaceRecognition  from './components/FaceRecognition/FaceRecognition';
 import './App.css';
 
 
-
-const app = new Clarifai.App({
-  apiKey: 'ce32293f0b1540e5ae04040b608b3463'
- });
 
     
 const particlesOptions = {
@@ -29,25 +24,27 @@ const particlesOptions = {
   }
   
 }
+
+const initialState = {
+  input: '',
+  imageUrl: '',
+  box: {},
+  route: 'SignIn',
+  isSignedIn: false,
+  user: {
+    id:'',
+    name:'',
+    email:'',
+    entries:0,
+    joined: ''
+  }
+  
+}
 class App extends Component {
 
   constructor(){
     super()
-    this.state = {
-      input: '',
-      imageUrl: '',
-      box: {},
-      route: 'SignIn',
-      isSignedIn: false,
-      user: {
-        id:'',
-        name:'',
-        email:'',
-        entries:0,
-        joined: ''
-      }
-      
-    }
+    this.state = initialState;
   }
 
 
@@ -84,7 +81,7 @@ class App extends Component {
 
   onRouteChange = (route) => {
     if(route === 'SignOut'){
-      this.setState({isSignedIn:false})
+      this.setState(initialState)
     }else if(route === 'home'){
       this.setState({isSignedIn:true})
     }
@@ -95,9 +92,15 @@ class App extends Component {
 
   onSubmit = () => {
     this.setState({imageUrl: this.state.input})
-    app.models.predict(
-      Clarifai.FACE_DETECT_MODEL,
-      this.state.input).then(response=> 
+    fetch('http://localhost:3000/imageurl',{
+      method:'post',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+            input:this.state.input
+        })
+      })
+      .then(response => response.json())
+      .then(response=> 
         {
           if(response){
             fetch('http://localhost:3000/image',{
@@ -114,7 +117,7 @@ class App extends Component {
           }
         this.displayFaceBox(this.calculateFaceLocation(response)) 
         })
-        .catch(err=>console.log(err))
+        .catch(console.log)
        
   }
   render(){
