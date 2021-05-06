@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/smart-facerecognition-website/static/css/main.1f7e4e18.chunk.css",
-    "main.js": "/smart-facerecognition-website/static/js/main.569b1e01.chunk.js",
-    "main.js.map": "/smart-facerecognition-website/static/js/main.569b1e01.chunk.js.map",
-    "runtime-main.js": "/smart-facerecognition-website/static/js/runtime-main.0f75b157.js",
-    "runtime-main.js.map": "/smart-facerecognition-website/static/js/runtime-main.0f75b157.js.map",
-    "static/css/2.c1f4f5f4.chunk.css": "/smart-facerecognition-website/static/css/2.c1f4f5f4.chunk.css",
-    "static/js/2.54d9263c.chunk.js": "/smart-facerecognition-website/static/js/2.54d9263c.chunk.js",
-    "static/js/2.54d9263c.chunk.js.map": "/smart-facerecognition-website/static/js/2.54d9263c.chunk.js.map",
-    "index.html": "/smart-facerecognition-website/index.html",
-    "static/css/2.c1f4f5f4.chunk.css.map": "/smart-facerecognition-website/static/css/2.c1f4f5f4.chunk.css.map",
-    "static/css/main.1f7e4e18.chunk.css.map": "/smart-facerecognition-website/static/css/main.1f7e4e18.chunk.css.map",
-    "static/js/2.54d9263c.chunk.js.LICENSE.txt": "/smart-facerecognition-website/static/js/2.54d9263c.chunk.js.LICENSE.txt"
+    "main.css": "/Smart-FaceRecognition-Website/static/css/main.1f7e4e18.chunk.css",
+    "main.js": "/Smart-FaceRecognition-Website/static/js/main.ef229ee9.chunk.js",
+    "main.js.map": "/Smart-FaceRecognition-Website/static/js/main.ef229ee9.chunk.js.map",
+    "runtime-main.js": "/Smart-FaceRecognition-Website/static/js/runtime-main.53709469.js",
+    "runtime-main.js.map": "/Smart-FaceRecognition-Website/static/js/runtime-main.53709469.js.map",
+    "static/css/2.c1f4f5f4.chunk.css": "/Smart-FaceRecognition-Website/static/css/2.c1f4f5f4.chunk.css",
+    "static/js/2.54d9263c.chunk.js": "/Smart-FaceRecognition-Website/static/js/2.54d9263c.chunk.js",
+    "static/js/2.54d9263c.chunk.js.map": "/Smart-FaceRecognition-Website/static/js/2.54d9263c.chunk.js.map",
+    "index.html": "/Smart-FaceRecognition-Website/index.html",
+    "static/css/2.c1f4f5f4.chunk.css.map": "/Smart-FaceRecognition-Website/static/css/2.c1f4f5f4.chunk.css.map",
+    "static/css/main.1f7e4e18.chunk.css.map": "/Smart-FaceRecognition-Website/static/css/main.1f7e4e18.chunk.css.map",
+    "static/js/2.54d9263c.chunk.js.LICENSE.txt": "/Smart-FaceRecognition-Website/static/js/2.54d9263c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0f75b157.js",
+    "static/js/runtime-main.53709469.js",
     "static/css/2.c1f4f5f4.chunk.css",
     "static/js/2.54d9263c.chunk.js",
     "static/css/main.1f7e4e18.chunk.css",
-    "static/js/main.569b1e01.chunk.js"
+    "static/js/main.ef229ee9.chunk.js"
   ]
 }
