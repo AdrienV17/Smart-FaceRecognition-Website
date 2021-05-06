@@ -8,14 +8,15 @@ import Rank  from './components/Rank/Rank';
 import ImageLinkForm  from './components/ImageLinkForm/ImageLinkForm';
 import FaceRecognition  from './components/FaceRecognition/FaceRecognition';
 import './App.css';
+import { apiUrl } from './constants.js';
 
 
-
+fetch(apiUrl).then(console.log)
     
 const particlesOptions = {
   particles:{
     number:{
-        value:130,
+        value:75,
         density: {
           enable: true,
           value_area:800
@@ -79,7 +80,7 @@ class App extends Component {
   onInputChange = (event) => {
     this.setState({input: event.target.value})
   } 
-
+  
   onRouteChange = (route) => {
     if(route === 'SignOut'){
       this.setState(initialState)
@@ -97,7 +98,7 @@ class App extends Component {
       alert('please give me a photo before Submiting')
       return
     }
-    fetch('https://desolate-caverns-29697.herokuapp.com/imageurl',{
+    fetch(`${apiUrl}/imageurl`,{
       method:'post',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({
@@ -108,7 +109,7 @@ class App extends Component {
       .then(response=> 
         {
           if(response){
-            fetch('https://desolate-caverns-29697.herokuapp.com/image',{
+            fetch(`${apiUrl}/image`,{
             method:'put',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify({
